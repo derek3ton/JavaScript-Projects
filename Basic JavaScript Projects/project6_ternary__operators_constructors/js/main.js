@@ -23,8 +23,9 @@ function my_Function() {
     " manufactured in " + Erik.Vehicle_Year;
 }
 
-function Person(first, last, age, sex) {
-    this.firstname = first;
+// Keyword and Constructor "This and New"
+function Person(first, last, age, sex) {  // defining function
+    this.firstname = first;  
     this.lastname = last;
     this.age = age;
     this.sex = sex;
@@ -40,7 +41,7 @@ function myFunction1() {
     document.getElementById("Nested_Function").innerHTML = Count();
     function Count() {
         var Starting_point = 5;
-        function Plus_one() {Starting_point += 1;}
+        function Plus_one() {Starting_point += 1;} // Nested Function
         Plus_one();
         return Starting_point;
         
