@@ -57,6 +57,7 @@ function my_Fixed() {
     document.getElementById("Fixed").innerHTML = n;
 }
 
+
 // Valueof example
 
 function my_Value() {
