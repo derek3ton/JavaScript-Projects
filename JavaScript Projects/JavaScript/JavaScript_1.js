@@ -41,5 +41,16 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
     ctx.beginPath();
     ctx.moveTo(0,0);
-    ctx.lineTo(500, 250);
+    ctx.lineTo(250, 100);
     ctx.stroke();
+
+// adding gradient background
+var c = document.getElementById("myCanvas2");
+var ctx = c.getContext("2d");
+
+var grd = ctx.createLinearGradient(0, 0, 250, 0);
+grd.addColorStop(0, "yellow");
+grd.addColorStop(1, "white");
+
+ctx.fillStyle = grd;
+ctx.fillRect(20, 20, 250, 100);

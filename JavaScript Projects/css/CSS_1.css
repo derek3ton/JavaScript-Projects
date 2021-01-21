@@ -1,0 +1,14 @@
+/* Styles inputs on form */
+input[type=text] {
+    width: auto;
+    padding: 2px 4px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+/* Changes background color of box when selected */
+input[type=text]:focus {
+    background-color: lightgray;
+}
