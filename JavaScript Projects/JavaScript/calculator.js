@@ -29,7 +29,7 @@ function Input_Decimal(dot) {
 function Handle_Operator(Next_Operator) {
     const {First_Operand, Display_Value, operator}=Calculator
     const Value_of_Input=parseFloat(Display_Value);  //When an operator key is pressed, we convert the current number displayed on the screen to a number and then stored the result in Calculator.First_Operand if it don't already exist
-    if(operator && Calculator.Wait_Second_Operand) {
+    if(operator && Calculator.Wait_Second_Operand) {  //Checks if an operator already exists and if Wait_Second_Operand is true, then updates and exits
         Calculator.operator=Next_Operator;
         return;
     }
@@ -72,8 +72,8 @@ Update_Display();
 //This monitors button clicks
 const keys=document.querySelector(".calculator-keys");
 keys.addEventListener("click", (event)=> {
-    const {target}=event;
-    if (!target.matches("button")) {
+    const {target}=event;  //The target var is an object that represents the element that was clicked
+    if (!target.matches("button")) { //IF the element that was clicked on is not a button, exit the function
         return;
     }
     if(target.classList.contains("operator")) {
@@ -86,7 +86,7 @@ keys.addEventListener("click", (event)=> {
         Update_Display();
         return;
     }
-    if(target.classList.contains("all-clear")) {
+    if(target.classList.contains("all-clear")) {  //Ensures AC clears the numbers from the screen
         Calculator_Reset();
         Update_Display();
         return;
